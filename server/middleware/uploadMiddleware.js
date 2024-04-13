@@ -1,4 +1,4 @@
-const multer = require('multer')
+const multer = require('multer') 
 const path = require("path");
 
 // Set up storage for uploaded files
@@ -13,9 +13,9 @@ const storage = multer.diskStorage({
 })
 
 // Create the multer instance
-const upload = multer(
+const upload = multer( // Will return an html file
     { 
-        storage: storage,
+        storage,
         limits: { fileSize: 2 * 1024 * 1024 }, // in bytes
         fileFilter: function (req, file, callback) {
             // Get File Extension
